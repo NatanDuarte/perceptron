@@ -16,4 +16,7 @@ my_model.train(epochs=2)
 
 print(f'accuracy: {my_model.get_accuracy()} %')
 print(f'model: {my_model.get_model()}')
+
+# if you want to visualize your model, use this:
+# my_model.plot()
 ```
