@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt
-import numpy as np
+# import matplotlib.pyplot as plt
+# import numpy as np
 
 class Perceptron():
     def __init__(self, matrix:list, weights:list,
@@ -67,22 +67,22 @@ class Perceptron():
     def get_model(self):
         return f'Y = g(x1 * {self.weights[0]} + x2 * {self.weights[1]} + {self.weights[2]} * {self.bias})'
 
-    def plot(self):
-        X = np.array(self.matrix)
-        Y = X[:, -1]
-        X = X[:, :-1]
-        plt.scatter(X[:, 0], X[:, 1], marker='o', c=Y, edgecolor='k')
+    # def plot(self):
+    #     X = np.array(self.matrix)
+    #     Y = X[:, -1]
+    #     X = X[:, :-1]
+    #     plt.scatter(X[:, 0], X[:, 1], marker='o', c=Y, edgecolor='k')
 
-        xmin, xmax = -10, 10
-        ymin, ymax = -10, 10
+    #     xmin, xmax = -10, 10
+    #     ymin, ymax = -10, 10
 
-        x = np.linspace(-5, 5, 50)
-        y = (-self.weights[0]*x -self.bias*self.weights[2]) / self.weights[1]
+    #     x = np.linspace(-5, 5, 50)
+    #     y = (-self.weights[0]*x -self.bias*self.weights[2]) / self.weights[1]
 
-        plt.axvline(0, -10, 10, color='k', linewidth=1)
-        plt.axhline(0, -10, 10, color='k', linewidth=1)
-        plt.plot(x, y, label='_nolegend_')
+    #     plt.axvline(0, -10, 10, color='k', linewidth=1)
+    #     plt.axhline(0, -10, 10, color='k', linewidth=1)
+    #     plt.plot(x, y, label='_nolegend_')
 
-        plt.xlim(xmin, xmax)
-        plt.ylim(ymin, ymax)
-        plt.show()
+    #     plt.xlim(xmin, xmax)
+    #     plt.ylim(ymin, ymax)
+    #     plt.show()

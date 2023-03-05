@@ -25,7 +25,5 @@ def example_func():
     print(f'accuracy: {my_model.get_accuracy()}%')
     print(f'model: {my_model.get_model()}')
 
-    # if you want to visualize your model, use this:
-    my_model.plot()
 
 main()
