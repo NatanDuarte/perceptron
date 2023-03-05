@@ -41,6 +41,11 @@ class Perceptron():
                 correct_answers += 1
         return float(f'{(correct_answers / float(len(self.matrix)) * 100):.2f}')
 
+    def predict(self, x1:float, x2:float):
+        return self._step_activation_function(
+            self.weights[0] * x1 + self.weights[1] * x2 + self.weights[2] * self.bias
+        )
+
     def _predict(self, sample):
         inputs = sample[:-1]
         inputs.append(self.bias)
